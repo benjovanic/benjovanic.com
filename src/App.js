@@ -10,7 +10,9 @@ import {
   faLinkedin,
   faGithub,
   faKeybase,
-  faTwitter
+  faTwitter,
+  faFacebook,
+  faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 
 import "./App.css";
@@ -27,7 +29,7 @@ function App() {
             borderRadius: 15
           }}
         >
-          <Grid item xs={12}>
+          <Grid item xs={12} style={{ marginTop: 10 }}>
             <Avatar
               alt="Ben Jovanic"
               src="https://s.gravatar.com/avatar/211c7928acd39d8185f6d428d71c88d5?s=180"
@@ -35,7 +37,7 @@ function App() {
             />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid item xs={12} style={{ marginTop: 10 }}>
             <Typography
               align="center"
               variant="h4"
@@ -50,24 +52,39 @@ function App() {
           </Grid>
 
           <Grid container lg={12} style={{ margin: 10 }}>
-            <Grid item xs={3} style={{ textAlign: "center" }}>
+            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
               <a href="https://www.linkedin.com/in/benjovanic">
                 <FontAwesomeIcon color="#000" icon={faLinkedin} size="3x" />
               </a>
             </Grid>
-            <Grid item xs={3} style={{ textAlign: "center" }}>
+            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
               <a href="https://github.com/benjovanic">
                 <FontAwesomeIcon color="#000" icon={faGithub} size="3x" />
               </a>
             </Grid>
-            <Grid item xs={3} style={{ textAlign: "center" }}>
+            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
               <a href="https://keybase.io/benjovanic">
                 <FontAwesomeIcon color="#000" icon={faKeybase} size="3x" />
               </a>
             </Grid>
-            <Grid item xs={3} style={{ textAlign: "center" }}>
+            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
               <a href="https://twitter.com/benjovanic">
                 <FontAwesomeIcon color="#000" icon={faTwitter} size="3x" />
+              </a>
+            </Grid>
+            <Grid
+              item
+              xs={3}
+              style={{ textAlign: "center", margin: "10px 0" }}
+            ></Grid>
+            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
+              <a href="https://www.instagram.com/benjovanic">
+                <FontAwesomeIcon color="#000" icon={faInstagram} size="3x" />
+              </a>
+            </Grid>
+            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
+              <a href="https://www.facebook.com/benjovanic">
+                <FontAwesomeIcon color="#000" icon={faFacebook} size="3x" />
               </a>
             </Grid>
           </Grid>
