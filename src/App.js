@@ -12,7 +12,8 @@ import {
   faKeybase,
   faTwitter,
   faFacebook,
-  faInstagram
+  faInstagram,
+  faStackExchange
 } from "@fortawesome/free-brands-svg-icons";
 
 import "./App.css";
@@ -72,11 +73,6 @@ function App() {
                 <FontAwesomeIcon color="#000" icon={faTwitter} size="3x" />
               </a>
             </Grid>
-            <Grid
-              item
-              xs={3}
-              style={{ textAlign: "center", margin: "10px 0" }}
-            ></Grid>
             <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
               <a href="https://www.instagram.com/benjovanic">
                 <FontAwesomeIcon color="#000" icon={faInstagram} size="3x" />
@@ -85,6 +81,15 @@ function App() {
             <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
               <a href="https://www.facebook.com/benjovanic">
                 <FontAwesomeIcon color="#000" icon={faFacebook} size="3x" />
+              </a>
+            </Grid>
+            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
+              <a href="https://stackoverflow.com/users/459589/benjovanic">
+                <FontAwesomeIcon
+                  color="#000"
+                  icon={faStackExchange}
+                  size="3x"
+                />
               </a>
             </Grid>
           </Grid>
