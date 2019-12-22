@@ -19,6 +19,36 @@ import {
 import "./App.css";
 
 function App() {
+  const profiles = [
+    {
+      url: "https://www.linkedin.com/in/benjovanic",
+      icon: faLinkedin
+    },
+    {
+      url: "https://github.com/benjovanic",
+      icon: faGithub
+    },
+    {
+      url: "https://keybase.io/benjovanic",
+      icon: faKeybase
+    },
+    {
+      url: "https://twitter.com/benjovanic",
+      icon: faTwitter
+    },
+    {
+      url: "https://www.instagram.com/benjovanic",
+      icon: faInstagram
+    },
+    {
+      url: "https://www.facebook.com/benjovanic",
+      icon: faFacebook
+    },
+    {
+      url: "https://stackexchange.com/users/208850/benjovanic",
+      icon: faStackExchange
+    }
+  ];
   return (
     <Box m={2} borderRadius="16">
       <Container maxWidth="sm" borderRadius="16">
@@ -53,45 +83,23 @@ function App() {
           </Grid>
 
           <Grid container lg={12} style={{ margin: 10 }}>
-            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
-              <a href="https://www.linkedin.com/in/benjovanic">
-                <FontAwesomeIcon color="#000" icon={faLinkedin} size="3x" />
-              </a>
-            </Grid>
-            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
-              <a href="https://github.com/benjovanic">
-                <FontAwesomeIcon color="#000" icon={faGithub} size="3x" />
-              </a>
-            </Grid>
-            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
-              <a href="https://keybase.io/benjovanic">
-                <FontAwesomeIcon color="#000" icon={faKeybase} size="3x" />
-              </a>
-            </Grid>
-            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
-              <a href="https://twitter.com/benjovanic">
-                <FontAwesomeIcon color="#000" icon={faTwitter} size="3x" />
-              </a>
-            </Grid>
-            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
-              <a href="https://www.instagram.com/benjovanic">
-                <FontAwesomeIcon color="#000" icon={faInstagram} size="3x" />
-              </a>
-            </Grid>
-            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
-              <a href="https://www.facebook.com/benjovanic">
-                <FontAwesomeIcon color="#000" icon={faFacebook} size="3x" />
-              </a>
-            </Grid>
-            <Grid item xs={3} style={{ textAlign: "center", margin: "10px 0" }}>
-              <a href="https://stackoverflow.com/users/459589/benjovanic">
-                <FontAwesomeIcon
-                  color="#000"
-                  icon={faStackExchange}
-                  size="3x"
-                />
-              </a>
-            </Grid>
+            {profiles.map(profile => {
+              return (
+                <Grid
+                  item
+                  xs={3}
+                  style={{ textAlign: "center", margin: "10px 0" }}
+                >
+                  <a href={profile.url}>
+                    <FontAwesomeIcon
+                      color="#000"
+                      icon={profile.icon}
+                      size="3x"
+                    />
+                  </a>
+                </Grid>
+              );
+            })}
           </Grid>
         </Grid>
       </Container>
