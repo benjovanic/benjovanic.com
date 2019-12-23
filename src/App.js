@@ -21,37 +21,44 @@ import "./App.css";
 function App() {
   const profiles = [
     {
+      name: "LinkedIn",
       url: "https://www.linkedin.com/in/benjovanic",
       icon: faLinkedin
     },
     {
+      name: "GitHub",
       url: "https://github.com/benjovanic",
       icon: faGithub
     },
     {
+      name: "Keybase",
       url: "https://keybase.io/benjovanic",
       icon: faKeybase
     },
     {
+      name: "StackExchange",
+      url: "https://stackexchange.com/users/208850/benjovanic",
+      icon: faStackExchange
+    },
+    {
+      name: "Twitter",
       url: "https://twitter.com/benjovanic",
       icon: faTwitter
     },
     {
+      name: "Instagram",
       url: "https://www.instagram.com/benjovanic",
       icon: faInstagram
     },
     {
+      name: "Facebook",
       url: "https://www.facebook.com/benjovanic",
       icon: faFacebook
-    },
-    {
-      url: "https://stackexchange.com/users/208850/benjovanic",
-      icon: faStackExchange
     }
   ];
   return (
-    <Box m={2} borderRadius="16">
-      <Container maxWidth="sm" borderRadius="16">
+    <Box m={2}>
+      <Container maxWidth="sm">
         <Grid
           container
           style={{
@@ -63,18 +70,13 @@ function App() {
           <Grid item xs={12} style={{ marginTop: 10 }}>
             <Avatar
               alt="Ben Jovanic"
-              src="https://s.gravatar.com/avatar/211c7928acd39d8185f6d428d71c88d5?s=180"
+              src="ben-jovanic.jpg"
               style={{ height: 180, width: 180, margin: "auto" }}
             />
           </Grid>
 
           <Grid item xs={12} style={{ marginTop: 10 }}>
-            <Typography
-              align="center"
-              variant="h4"
-              component="h1"
-              gutterTopgutterBottom
-            >
+            <Typography align="center" variant="h4" component="h1" gutterBottom>
               Ben Jovanic
             </Typography>
             <Typography align="center" variant="h6" component="h2" gutterBottom>
@@ -82,10 +84,11 @@ function App() {
             </Typography>
           </Grid>
 
-          <Grid container lg={12} style={{ margin: 10 }}>
+          <Grid container style={{ margin: 10 }}>
             {profiles.map(profile => {
               return (
                 <Grid
+                  key={profile.name}
                   item
                   xs={3}
                   style={{ textAlign: "center", margin: "10px 0" }}
