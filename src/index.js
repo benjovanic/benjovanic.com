@@ -6,12 +6,15 @@ import theme from "./theme";
 // import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import HttpsRedirect from "react-https-redirect";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
     <CssBaseline />
-    <App />
+    <HttpsRedirect>
+      <App />
+    </HttpsRedirect>
   </ThemeProvider>,
   document.querySelector("#root")
 );
