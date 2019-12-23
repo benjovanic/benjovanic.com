@@ -16,8 +16,6 @@ import {
   faStackExchange
 } from "@fortawesome/free-brands-svg-icons";
 
-import "./App.css";
-
 function App() {
   const profiles = [
     {
@@ -98,6 +96,7 @@ function App() {
                       color="#000"
                       icon={profile.icon}
                       size="3x"
+                      title={profile.name}
                     />
                   </a>
                 </Grid>
