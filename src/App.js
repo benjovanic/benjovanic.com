@@ -66,11 +66,13 @@ function App() {
           }}
         >
           <Grid item xs={12} style={{ marginTop: 10 }}>
-            <Avatar
-              alt="Ben Jovanic"
-              src="ben-jovanic.jpg"
-              style={{ height: 180, width: 180, margin: "auto" }}
-            />
+            <a href="/">
+              <Avatar
+                alt="Ben Jovanic"
+                src="ben-jovanic.jpg"
+                style={{ height: 180, width: 180, margin: "auto" }}
+              />
+            </a>
           </Grid>
 
           <Grid item xs={12} style={{ marginTop: 10 }}>
