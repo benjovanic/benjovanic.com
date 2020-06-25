@@ -13,7 +13,8 @@ import {
   faTwitter,
   faFacebook,
   faInstagram,
-  faStackExchange
+  faStackExchange,
+  faStrava
 } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
@@ -52,6 +53,11 @@ function App() {
       name: "Facebook",
       url: "https://www.facebook.com/benjovanic",
       icon: faFacebook
+    },
+    {
+      name: "Strava",
+      url: "https://www.strava.com/athletes/31998038",
+      icon: faStrava
     }
   ];
   return (
@@ -80,11 +86,14 @@ function App() {
               Ben Jovanic
             </Typography>
             <Typography align="center" variant="h6" component="h2" gutterBottom>
-              Software Engineer, Vancouver
+              Software Engineer in Vancouver, Canada
+            </Typography>
+            <Typography align="center" component="p" gutterBottom>
+              Interested in elegant code and beautifully designed software.
             </Typography>
           </Grid>
 
-          <Grid container style={{ margin: 10 }}>
+          <Grid id="social-icons" container style={{ margin: 10 }}>
             {profiles.map(profile => {
               return (
                 <Grid

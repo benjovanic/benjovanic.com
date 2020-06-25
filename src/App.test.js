@@ -10,7 +10,8 @@ test("renders brand icons", () => {
     "StackExchange",
     "Twitter",
     "Instagram",
-    "Facebook"
+    "Facebook",
+    "Strava"
   ];
 
   const { getByTitle } = render(<App />);
