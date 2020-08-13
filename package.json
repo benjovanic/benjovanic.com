@@ -1,6 +1,7 @@
 {
   "name": "benjovanic-dot-com",
   "version": "1.0.0",
+  "homepage": "http://benjovanic.github.io/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
@@ -17,6 +18,8 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -24,5 +27,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
