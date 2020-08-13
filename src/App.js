@@ -2,7 +2,6 @@ import React from "react";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import blueGrey from "@material-ui/core/colors/blueGrey";
 import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -66,9 +65,10 @@ function App() {
         <Grid
           container
           style={{
-            backgroundColor: blueGrey[100],
+            backgroundColor: '#101357',
             padding: 10,
-            borderRadius: 15
+            borderRadius: 5,
+            color: '#fff'
           }}
         >
           <Grid item xs={12} style={{ marginTop: 10 }}>
@@ -104,7 +104,7 @@ function App() {
                 >
                   <a href={profile.url}>
                     <FontAwesomeIcon
-                      color="#000"
+                      color="#fff"
                       icon={profile.icon}
                       size="3x"
                       title={profile.name}
