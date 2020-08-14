@@ -7,17 +7,19 @@ test("renders brand icons", () => {
     "LinkedIn",
     "GitHub",
     "Keybase",
-    "StackExchange",
+    "StackOverflow",
     "Twitter",
     "Instagram",
     "Facebook",
     "Strava"
   ];
 
-  const { getByTitle } = render(<App />);
+  const { container } = render(<App />);
+  const titles = [];
 
-  profiles.forEach(profile => {
-    const linkElement = getByTitle(profile);
-    expect(linkElement).toBeInTheDocument();
-  });
+  container
+    .querySelectorAll("[data-id='profile-icon'] title")
+    .forEach(i => titles.push(i.innerHTML));
+
+  expect(profiles.sort()).toEqual(titles.sort());
 });

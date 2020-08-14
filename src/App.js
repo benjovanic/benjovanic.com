@@ -12,7 +12,7 @@ import {
   faTwitter,
   faFacebook,
   faInstagram,
-  faStackExchange,
+  faStackOverflow,
   faStrava
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -34,9 +34,9 @@ function App() {
       icon: faKeybase
     },
     {
-      name: "StackExchange",
-      url: "https://stackexchange.com/users/208850/benjovanic",
-      icon: faStackExchange
+      name: "StackOverflow",
+      url: "https://stackoverflow.com/users/459589/benjovanic",
+      icon: faStackOverflow
     },
     {
       name: "Twitter",
@@ -108,6 +108,7 @@ function App() {
                       icon={profile.icon}
                       size="3x"
                       title={profile.name}
+                      data-id="profile-icon"
                     />
                   </a>
                 </Grid>
