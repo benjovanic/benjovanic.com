@@ -1,3 +1,3 @@
-# benjovanic-dot-com
-
 Hosted at https://benjovanic.com
+
+Deployed on GitHub Pages
