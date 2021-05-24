@@ -8,8 +8,7 @@ import './style.css';
 
 const ContactForm = () => {
   const [data, setData] = useState({});
-  const [message, setMessage] = useState(null);
-  const [formUntouched, setFormUntouched] = useState(true);
+  const [messages, setMessages] = useState(null);
   const [sending, setSending] = useState(false);
 
   useEffect(() => {
@@ -26,26 +25,35 @@ const ContactForm = () => {
     }));
   };
 
-  const formValid = () => {
-    setFormUntouched(false);
-    const error = {};
-    if (!data?.name) {
-      error.name = 'Please complete';
+  const formValid = (field) => {
+    let valid = true;
+    const error = {
+      name: '',
+      email: '',
+      message: '',
+    };
+    if (messages?.name || !field || field === 'name') {
+      error.name = !data?.name ? 'Please complete' : '';
+      valid = !!data?.name;
     }
-    if (!data?.email) {
-      error.email = 'Please complete';
-    } else if (!data.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
-      error.email = 'Invalid email address';
+    if (messages?.email || !field || field === 'email') {
+      if (!data?.email) {
+        error.email = 'Please complete';
+        valid = false;
+      } else if (!data.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+        error.email = 'Invalid email address';
+        valid = false;
+      } else {
+        error.email = '';
+        valid = true;
+      }
     }
-    if (!data?.message) {
-      error.message = 'Please complete';
+    if (messages?.message || !field || field === 'message') {
+      error.message = !data?.message ? 'Please complete' : '';
+      valid = !!data?.message;
     }
-    if (error?.name || error?.email || error?.message) {
-      setMessage(error);
-      return false;
-    }
-    setMessage(null);
-    return true;
+    setMessages(error);
+    return valid;
   };
 
   const submitForm = (event) => {
@@ -54,14 +62,17 @@ const ContactForm = () => {
       setSending(true);
       api.contact(data)
         .then(() => {
-          setMessage(null);
+          setMessages({
+            success: 'Your message have been sent, I\'ll be in touch soon',
+          });
           setData({});
-          setFormUntouched(true);
           setSending(false);
           document.getElementById('form').reset();
         })
         .catch(() => {
-          setMessage({ error: 'There was an error sending the message, please try again!' });
+          setMessages({
+            error: 'There was an error sending the message, please try again!',
+          });
           setSending(false);
         });
     }
@@ -75,9 +86,12 @@ const ContactForm = () => {
       onSubmit={submitForm}
       id="form"
     >
-      {message?.error && (
+      <Typography align="left" variant="h6" component="h2" gutterBottom>
+        Get in touch
+      </Typography>
+      {(messages?.error || messages?.success) && (
         <Typography align="left" component="p" gutterBottom>
-          {message?.error}
+          {messages?.error || messages?.success}
         </Typography>
       )}
       <Grid item xs={12} style={{ marginTop: 10 }}>
@@ -87,13 +101,13 @@ const ContactForm = () => {
           name="name"
           variant="outlined"
           onChange={handleChange}
-          onBlur={formValid}
+          onBlur={() => formValid('name')}
           required
-          error={message?.name}
+          error={!!messages?.name}
         />
-        {message?.name && (
+        {messages?.name && (
           <Typography align="left" component="p" gutterBottom>
-            {message?.name}
+            {messages?.name}
           </Typography>
         )}
       </Grid>
@@ -105,13 +119,13 @@ const ContactForm = () => {
           name="email"
           variant="outlined"
           onChange={handleChange}
-          onBlur={formValid}
+          onBlur={() => formValid('email')}
           required
-          error={message?.email}
+          error={!!messages?.email}
         />
-        {message?.email && (
+        {messages?.email && (
           <Typography align="left" component="p" gutterBottom>
-            {message?.email}
+            {messages?.email}
           </Typography>
         )}
       </Grid>
@@ -122,15 +136,15 @@ const ContactForm = () => {
           name="message"
           variant="outlined"
           onChange={handleChange}
-          onBlur={formValid}
+          onBlur={() => formValid('message')}
           required
           multiline
           rows={4}
-          error={message?.message}
+          error={!!messages?.message}
         />
-        {message?.message && (
+        {messages?.message && (
           <Typography align="left" component="p" gutterBottom>
-            {message?.message}
+            {messages?.message}
           </Typography>
         )}
       </Grid>
@@ -139,7 +153,7 @@ const ContactForm = () => {
           style={{ backgroundColor: '#fff' }}
           variant="contained"
           type="submit"
-          disabled={formUntouched || message || sending}
+          disabled={sending}
         >
           {sending ? 'Sending...' : 'Send'}
         </Button>

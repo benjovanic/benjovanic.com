@@ -20,9 +20,9 @@ const PersonalSummary = () => (
         Ben Jovanic
       </Typography>
       <Typography align="center" variant="h6" component="h2" gutterBottom>
-        Senior Software Engineer at Ping Identity
+        Senior Software Engineer
         <br />
-        in Vancouver, Canada
+        Vancouver, Canada
       </Typography>
       <Typography align="center" component="p" gutterBottom>
         Interested in elegant code and beautifully designed software.
