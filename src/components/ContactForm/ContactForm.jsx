@@ -33,8 +33,12 @@ const ContactForm = () => {
       message: '',
     };
     if (messages?.name || !field || field === 'name') {
-      error.name = !data?.name ? 'Please complete' : '';
-      valid = !!data?.name;
+      if (!data?.name) {
+        error.name = 'Please complete';
+        valid = false;
+      } else {
+        error.name = '';
+      }
     }
     if (messages?.email || !field || field === 'email') {
       if (!data?.email) {
@@ -45,12 +49,15 @@ const ContactForm = () => {
         valid = false;
       } else {
         error.email = '';
-        valid = true;
       }
     }
     if (messages?.message || !field || field === 'message') {
-      error.message = !data?.message ? 'Please complete' : '';
-      valid = !!data?.message;
+      if (!data?.message) {
+        error.message = 'Please complete';
+        valid = false;
+      } else {
+        error.message = '';
+      }
     }
     setMessages(error);
     return valid;
