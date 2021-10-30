@@ -70,7 +70,7 @@ const ContactForm = () => {
       api.contact(data)
         .then(() => {
           setMessages({
-            success: 'Your message have been sent, I\'ll be in touch soon',
+            success: 'Your message has been sent, I\'ll be in touch soon',
           });
           setData({});
           setSending(false);
