@@ -9,7 +9,7 @@ const PersonalSummary = () => (
       <a href="/">
         <Avatar
           alt="Ben Jovanic"
-          src="ben-jovanic.jpg"
+          src="ben-jovanic.jpg?v=2"
           style={{ height: 180, width: 180, margin: 'auto' }}
         />
       </a>
