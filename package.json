@@ -2,6 +2,9 @@
   "name": "benjovanic-dot-com",
   "version": "1.0.0",
   "homepage": "https://benjovanic.com",
+  "engines": {
+    "node": "16.0.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
@@ -20,7 +23,6 @@
     "@babel/core": "^7.9.6",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
-    "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.1.2",
     "eslint": "^6.8.0",
     "eslint-loader": "^4.0.2",
