@@ -67,7 +67,7 @@ const SocialIcons = () => {
         >
           <a href={profile.url}>
             <FontAwesomeIcon
-              color="#fff"
+              color="#000"
               icon={profile.icon}
               size="3x"
               title={profile.name}

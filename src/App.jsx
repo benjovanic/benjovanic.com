@@ -3,9 +3,9 @@ import { StylesProvider } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import PersonalSummary from './components/PersonalSummary/PersonalSummary';
 import SocialIcons from './components/SocialIcons/SocialIcons';
-import ContactForm from './components/ContactForm/ContactForm';
 
 const App = () => (
   <StylesProvider injectFirst>
@@ -14,15 +14,28 @@ const App = () => (
         <Grid
           container
           style={{
-            backgroundColor: '#101357',
+            backgroundColor: '#ccc',
             padding: 10,
             borderRadius: 5,
-            color: '#fff',
+            color: '#000',
+            boxShadow: '#ccc 0px 0px 10px'
           }}
         >
           <PersonalSummary />
           <SocialIcons />
-          <ContactForm />
+          {/* <ContactForm /> */}
+          <Button
+            style={{ 
+              backgroundColor: '#fff', 
+              margin: "10px auto 20px",
+              textTransform: "none" 
+            }}
+            variant="contained"
+            type="button"
+            href="mailto:contact@benjovanic.com?subject=Contact%20Form%20-%20benjovanic.com"
+          >
+            Send me an email
+          </Button>
         </Grid>
       </Container>
     </Box>

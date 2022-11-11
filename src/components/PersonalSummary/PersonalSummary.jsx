@@ -21,7 +21,8 @@ const PersonalSummary = () => (
       </Typography>
       <Typography align="center" variant="h6" component="h2" gutterBottom>
         Senior Software Engineer
-        <br />
+      </Typography>
+      <Typography align="center" variant="h7" component="h3" gutterBottom>
         Vancouver, Canada
       </Typography>
       <Typography align="center" component="p" gutterBottom>
