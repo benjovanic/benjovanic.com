@@ -14,7 +14,7 @@ const App = () => (
         <Grid
           container
           style={{
-            backgroundColor: '#ccc',
+            backgroundColor: 'rgb(182, 186, 202)',
             padding: 10,
             borderRadius: 5,
             color: '#000',
@@ -26,7 +26,7 @@ const App = () => (
           {/* <ContactForm /> */}
           <Button
             style={{ 
-              backgroundColor: '#fff', 
+              backgroundColor: '#ddd', 
               margin: "10px auto 20px",
               textTransform: "none" 
             }}

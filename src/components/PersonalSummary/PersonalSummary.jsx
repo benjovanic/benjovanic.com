@@ -10,7 +10,7 @@ const PersonalSummary = () => (
         <Avatar
           alt="Ben Jovanic"
           src="ben-jovanic.jpg?v=2"
-          style={{ height: 180, width: 180, margin: 'auto', border: '1px solid #ccc' }}
+          style={{ height: 180, width: 180, margin: 'auto', border: '1px solid rgb(150, 153, 166)' }}
         />
       </a>
     </Grid>
