@@ -12,6 +12,7 @@ test('renders brand icons', () => {
     'Instagram',
     'Facebook',
     'Strava',
+    'Telegram',
   ];
 
   const { container } = render(<App />);

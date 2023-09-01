@@ -2,9 +2,6 @@
   "name": "benjovanic-dot-com",
   "version": "1.0.0",
   "homepage": "https://benjovanic.com",
-  "engines": {
-    "node": "16.0.0"
-  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
@@ -34,8 +31,8 @@
   "scripts": {
     "predeploy": "npm run build && npm run test:nowatch",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "test:nowatch": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",

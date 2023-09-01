@@ -10,6 +10,7 @@ import {
   faInstagram,
   faStackOverflow,
   faStrava,
+  faTelegram,
 } from '@fortawesome/free-brands-svg-icons';
 
 const SocialIcons = () => {
@@ -54,15 +55,20 @@ const SocialIcons = () => {
       url: 'https://www.strava.com/athletes/31998038',
       icon: faStrava,
     },
+    {
+      name: 'Telegram',
+      url: 'https://t.me/benjovanic',
+      icon: faTelegram,
+    },
   ];
 
   return (
-    <Grid id="social-icons" container style={{ margin: 10 }}>
+    <Grid id="social-icons" container style={{ margin: "10px 100px" }}>
       {profiles.map((profile) => (
         <Grid
           key={profile.name}
           item
-          xs={3}
+          xs={4}
           style={{ textAlign: 'center', margin: '10px 0' }}
         >
           <a href={profile.url}>
