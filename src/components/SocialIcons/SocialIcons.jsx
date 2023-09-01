@@ -63,25 +63,27 @@ const SocialIcons = () => {
   ];
 
   return (
-    <Grid id="social-icons" container style={{ margin: "10px 100px" }}>
-      {profiles.map((profile) => (
-        <Grid
-          key={profile.name}
-          item
-          xs={4}
-          style={{ textAlign: 'center', margin: '10px 0' }}
-        >
-          <a href={profile.url}>
-            <FontAwesomeIcon
-              color="#000"
-              icon={profile.icon}
-              size="3x"
-              title={profile.name}
-              data-id="profile-icon"
-            />
-          </a>
-        </Grid>
-      ))}
+    <Grid id="social-icons" xs={12}>
+      <Grid id="social-icons" container style={{ width: 300, margin: '10px auto' }}>
+        {profiles.map((profile) => (
+          <Grid
+            key={profile.name}
+            item
+            xs={4}
+            style={{ textAlign: 'center', margin: '10px 0' }}
+          >
+            <a href={profile.url}>
+              <FontAwesomeIcon
+                color="#000"
+                icon={profile.icon}
+                size="3x"
+                title={profile.name}
+                data-id="profile-icon"
+              />
+            </a>
+          </Grid>
+        ))}
+      </Grid>
     </Grid>
   );
 };

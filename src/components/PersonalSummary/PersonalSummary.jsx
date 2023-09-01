@@ -10,7 +10,7 @@ const PersonalSummary = () => (
         <Avatar
           alt="Ben Jovanic"
           src="ben-jovanic.jpg?v=2"
-          style={{ height: 180, width: 180, margin: 'auto' }}
+          style={{ height: 180, width: 180, margin: 'auto', border: '1px solid #ccc' }}
         />
       </a>
     </Grid>
@@ -19,14 +19,8 @@ const PersonalSummary = () => (
       <Typography align="center" variant="h4" component="h1" gutterBottom>
         Ben Jovanic
       </Typography>
-      <Typography align="center" variant="h6" component="h2" gutterBottom>
-        Senior Software Engineer
-      </Typography>
-      <Typography align="center" variant="h7" component="h3" gutterBottom>
-        Vancouver, Canada
-      </Typography>
       <Typography align="center" component="p" gutterBottom>
-        Interested in elegant code and beautifully designed software.
+        Based in Vancouver, Canada
       </Typography>
     </Grid>
   </>
