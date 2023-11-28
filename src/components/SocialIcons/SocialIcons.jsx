@@ -5,7 +5,7 @@ import {
   faLinkedin,
   faGithub,
   faKeybase,
-  faTwitter,
+  faXTwitter,
   faFacebook,
   faInstagram,
   faStackOverflow,
@@ -38,7 +38,7 @@ const SocialIcons = () => {
     {
       name: 'Twitter',
       url: 'https://twitter.com/benjovanic',
-      icon: faTwitter,
+      icon: faXTwitter,
     },
     {
       name: 'Instagram',
@@ -63,7 +63,7 @@ const SocialIcons = () => {
   ];
 
   return (
-    <Grid id="social-icons" xs={12}>
+    <Grid id="social-icons" xs={12} item>
       <Grid id="social-icons" container style={{ width: 300, margin: '10px auto' }}>
         {profiles.map((profile) => (
           <Grid
