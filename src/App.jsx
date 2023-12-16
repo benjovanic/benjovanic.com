@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import PersonalSummary from './components/PersonalSummary/PersonalSummary';
 import SocialIcons from './components/SocialIcons/SocialIcons';
+import Photos from './components/Photos/Photos';
 
 const App = () => (
   <StylesProvider injectFirst>
@@ -18,23 +19,34 @@ const App = () => (
             padding: 10,
             borderRadius: 5,
             color: '#000',
-            boxShadow: '#ccc 0px 0px 10px'
+            boxShadow: '#ccc 0px 0px 10px',
           }}
         >
           <PersonalSummary />
           <SocialIcons />
           {/* <ContactForm /> */}
           <Button
-            style={{ 
-              backgroundColor: '#ddd', 
-              margin: "10px auto 20px",
-              textTransform: "none" 
+            style={{
+              backgroundColor: '#ddd',
+              margin: '10px auto 20px',
+              textTransform: 'none',
             }}
             variant="contained"
             type="button"
             href="mailto:contact@benjovanic.com?subject=Contact%20Form%20-%20benjovanic.com"
           >
             Send me an email
+          </Button>
+          <Button
+            style={{
+              backgroundColor: '#ddd',
+              margin: '10px auto 20px',
+              textTransform: 'none',
+            }}
+            variant="contained"
+            type="button"
+          >
+            View Photography
           </Button>
         </Grid>
       </Container>
