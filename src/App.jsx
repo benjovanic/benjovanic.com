@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { StylesProvider } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
@@ -21,10 +21,12 @@ const App = () => (
             boxShadow: '#ccc 0px 0px 10px',
           }}
         >
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/photography" component={Photos} />
-          </Switch>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/photography" component={Photos} />
+            </Switch>
+          </Router>
         </Grid>
       </Container>
     </Box>
