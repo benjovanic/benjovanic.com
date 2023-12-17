@@ -21,7 +21,7 @@ const Home = () => {
         type="button"
         href="mailto:contact@benjovanic.com?subject=Contact%20Form%20-%20benjovanic.com"
       >
-        Send me an email
+        Email Me
       </Button>
       <Button
         style={{

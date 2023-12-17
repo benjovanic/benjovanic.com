@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Home from './components/Home/Home';
-import Photos from './components/Photos/Photos';
+import Photography from './components/Photography/Photography';
 
 const App = () => (
   <StylesProvider injectFirst>
@@ -24,7 +24,7 @@ const App = () => (
           <Router>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/photography" component={Photos} />
+              <Route path="/photography" component={Photography} />
             </Switch>
           </Router>
         </Grid>

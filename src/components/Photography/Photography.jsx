@@ -7,7 +7,7 @@ import { useHistory } from 'react-router-dom';
 // eslint-disable-next-line import/no-unresolved
 import 'yet-another-react-lightbox/styles.css';
 
-const Photos = () => {
+const Photography = () => {
   const history = useHistory();
 
   const [index, setIndex] = React.useState(-1);
@@ -57,4 +57,4 @@ const Photos = () => {
   );
 };
 
-export default Photos;
+export default Photography;
