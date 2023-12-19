@@ -78,6 +78,7 @@ const SocialIcons = () => {
                 icon={profile.icon}
                 size="3x"
                 title={profile.name}
+                alt={profile.name}
                 data-id="profile-icon"
               />
             </a>

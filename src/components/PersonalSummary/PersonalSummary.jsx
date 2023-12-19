@@ -14,7 +14,7 @@ const PersonalSummary = () => (
             height: 180,
             width: 180,
             margin: 'auto',
-            border: '1px solid rgb(150, 153, 166)',
+            border: '1px solid #666',
           }}
         />
       </a>

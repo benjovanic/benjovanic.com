@@ -23,8 +23,8 @@ const App = () => (
         >
           <Router>
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/photography" component={Photography} />
+              <Route default exact path="/" component={Home} />
+              <Route exact path="/photography" component={Photography} />
             </Switch>
           </Router>
         </Grid>
