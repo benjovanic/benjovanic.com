@@ -14,6 +14,9 @@ const Photography = () => {
   const [index, setIndex] = React.useState(-1);
 
   const photos = [
+    { src: 'photos/DSCF1387.jpeg', width: 1280, height: 854 },
+    { src: 'photos/DSCF1362.jpeg', width: 854, height: 1280 },
+    { src: 'photos/DSCF1150.jpeg', width: 1280, height: 1280 },
     { src: 'photos/DSCF1125.jpeg', width: 1280, height: 854 },
     { src: 'photos/IMG_5934.jpeg', width: 1280, height: 854 },
     { src: 'photos/DSCF1051.jpeg', width: 854, height: 1280 },
