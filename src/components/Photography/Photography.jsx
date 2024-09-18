@@ -37,6 +37,13 @@ const Photography = () => {
       description: 'Shot using Fujifilm X-T2',
     },
     {
+      src: 'photos/DSCF1334.jpeg',
+      width: 1280,
+      height: 854,
+      title: 'Ruby Lake, Sunshine Coast',
+      description: 'Shot using Fujifilm X-T2',
+    },
+    {
       src: 'photos/DSCF1387.jpeg',
       width: 1280,
       height: 854,
