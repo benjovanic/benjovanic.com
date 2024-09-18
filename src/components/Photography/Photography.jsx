@@ -16,6 +16,27 @@ const Photography = () => {
 
   const photos = [
     {
+      src: 'photos/DSCF1997.jpeg',
+      width: 1280,
+      height: 854,
+      title: 'Buttle Lake, Strathcona Park',
+      description: 'Shot using Fujifilm X-T2',
+    },
+    {
+      src: 'photos/DSCF1803.jpeg',
+      width: 1280,
+      height: 854,
+      title: 'Abandoned bridge near Ucluelet',
+      description: 'Shot using Fujifilm X-T2',
+    },
+    {
+      src: 'photos/DSCF1783.jpeg',
+      width: 1280,
+      height: 854,
+      title: 'Kennedy River, Vancouver Island',
+      description: 'Shot using Fujifilm X-T2',
+    },
+    {
       src: 'photos/DSCF1387.jpeg',
       width: 1280,
       height: 854,
